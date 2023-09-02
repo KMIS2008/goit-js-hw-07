@@ -34,6 +34,8 @@ listGallery.innerHTML = galleryImage;
 
 function clickImages(event){
 
+event.preventDefault();
+
     if(event.target === event.currentTarget){
         return
     }
@@ -54,11 +56,13 @@ const instance = basicLightbox.create(`
 
 instance.show()
 
+
 // console.log(instance)
 
 listGallery.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
         instance.close()
+        
     }
 })
 }
