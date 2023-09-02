@@ -62,9 +62,15 @@ instance.show()
 listGallery.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
         instance.close()
-        
     }
-})
+},  {once: true})
+
+// listGallery.addEventListener('keydown', event => {
+//     if (event.key === 'Escape') {
+//         instance.close()
+        
+//     }
+// })
 }
 
 listGallery.addEventListener('click', clickImages);
